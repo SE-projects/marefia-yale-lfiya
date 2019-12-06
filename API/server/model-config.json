@@ -1,0 +1,36 @@
+{
+  "_meta": {
+    "sources": [
+      "loopback/common/models",
+      "loopback/server/models",
+      "../common/models",
+      "./models"
+    ],
+    "mixins": [
+      "loopback/common/mixins",
+      "loopback/server/mixins",
+      "../common/mixins",
+      "./mixins"
+    ]
+  },
+  "Account": {
+    "dataSource": "mongodb",
+    "public": true
+  },
+  "Advertisment": {
+    "dataSource": "mongodb",
+    "public": true
+  },
+  "Investigator": {
+    "dataSource": "mongodb",
+    "public": true
+  },
+  "BnBProvider": {
+    "dataSource": "mongodb",
+    "public": true
+  },
+  "Customer": {
+    "dataSource": "mongodb",
+    "public": true
+  }
+}

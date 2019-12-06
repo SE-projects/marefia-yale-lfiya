@@ -1,0 +1,43 @@
+{
+  "name": "BnBProvider",
+  "plural": "BnBProviders",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "telephone": {
+      "type": "number",
+      "required": true
+    },
+    "services": {
+      "type": [
+        "string"
+      ],
+      "required": true
+    },
+    "manager": {
+      "type": {
+        "name": {
+          "type": "String",
+          "required": true
+        },
+        "phone": {
+          "type": "number"
+        }
+      }
+    },
+    "cook": {
+      "type": {}
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

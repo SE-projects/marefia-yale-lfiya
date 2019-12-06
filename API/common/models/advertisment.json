@@ -1,0 +1,30 @@
+{
+  "name": "Advertisment",
+  "plural": "Advertisments",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "body": {
+      "type": "string",
+      "required": true
+    },
+    "imageUrl": {
+      "type": "string"
+    },
+    "telephone": {
+      "type": "number",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}
