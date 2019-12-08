@@ -11,6 +11,3 @@ export const SignInViews = {
         errorDisplay.innerText = error
     }
 };
-signInButton.onclick = ()=>{
-    console.log('Mother fuck');
-};
