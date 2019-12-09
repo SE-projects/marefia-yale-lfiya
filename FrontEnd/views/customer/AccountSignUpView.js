@@ -6,7 +6,7 @@ export const SignUpViews = {
     getPassword: () => password.value,
     onSignUpButtonClicked: () => signUpButton.onclick,
     isTermChecked: () => termAgreement.checked,
-    setErrorDisplay: (error) => {
+    setError: (error) => {
         errorDisplay.innerText = error
     }
 };

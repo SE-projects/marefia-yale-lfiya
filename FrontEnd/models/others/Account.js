@@ -21,7 +21,7 @@ export default class Account {
                 $.post('http://localhost:3000/api/Accounts', JSON.stringify(this), (data, status) => {
                     console.log('Result ' + data);
                 });
-                window.location.href = 'E:/Files/Web/Marefiya Yale lifya/Front End/ui/Main Website/index.html;
+                window.location.href = 'E:/Files/Web/Marefiya Yale lifya/Front End/ui/Main Website/index.html';
             }
 
         });

@@ -7,7 +7,7 @@ export const SignInViews = {
     getUserName: () => userName.value,
     getPassword: () => password.value,
     onSignInButtonClicked: () => signInButton.onclick,
-    setErrorDisplay: (error) => {
+    setError: (error) => {
         errorDisplay.innerText = error
     }
 };
