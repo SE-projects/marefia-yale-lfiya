@@ -1,11 +1,5 @@
 {
-  "db": {
-    "name": "db",
-    "localStorage": "",
-    "file": "my_data.json",
-    "connector": "memory"
-  },
-  "mongodb": {
+    "mongodb": {
     "host": "localhost",
     "port": 27017,
     "url": "",
