@@ -1,4 +1,4 @@
-import Account from '../../models/others/Account.js';
+import Account from '../../models/customer/Account.js';
 import {SignInViews} from '../../views/customer/AccountSignInViews.js';
 import {SignUpViews} from '../../views/customer/AccountSignUpView.js';
 

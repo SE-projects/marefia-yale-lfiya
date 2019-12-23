@@ -7,11 +7,19 @@
     "validateUpsert": true
   },
   "properties": {
-    "name": {
+    "firstName": {
+      "type": "string",
+      "required": true
+    },
+    "lastName": {
       "type": "string",
       "required": true
     },
     "telephone": {
+      "type": "number",
+      "required": true
+    },
+    "bnbId": {
       "type": "number",
       "required": true
     }
