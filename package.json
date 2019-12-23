@@ -1,0 +1,22 @@
+{
+  "name": "marefia-yale-lfiya",
+  "version": "1.0.0",
+  "description": "class project with a purpose of automating a B&amp;B from the finding the service to the sitting at the breakfast table at the chosen B&amp;B.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SE-projects/marefia-yale-lfiya.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SE-projects/marefia-yale-lfiya/issues"
+  },
+  "homepage": "https://github.com/SE-projects/marefia-yale-lfiya#readme",
+  "dependencies": {
+    "axios": "^0.19.0"
+  }
+}

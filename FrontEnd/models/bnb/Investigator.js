@@ -1,4 +1,4 @@
-import {IRoute as $} from "express-serve-static-core";
+import axios from 'axios';
 
 export default class Investigator {
     constructor(firstName, lastName, id, phone, bnbId) {
@@ -12,30 +12,31 @@ export default class Investigator {
     async addInvestigator() {
         if (this.investigatorExists()) return "This investigator already exists";
         else {
-            $.post('http://localhost:3000/api/Investigator', JSON.stringify({
-                "firstName": this.firstName,
-                "lastName": this.lastName,
-                "phone": this.phone,
-                "bnbId": this.bnbId,
-            }), (data, status) => {
-                console.log(`${data}`);
-            })
+            axios.post('http://localhost:3000/api/Investigator', {
+                firstName: this.firstName,
+                lastName: this.lastName,
+                phone: this.phone,
+                bnbId: this.bnbId,
+            }).then(value => {
+                console.log(value);
+                return "Added Investigator"
+            });
+
         }
     }
 
     async investigatorExists() {
-        let investigatorExists = false;
-        $.get('http://localhost:3000/api/Investigator', (data, status) => {
+        axios.get('http://localhost:3000/api/Investigator').then(value => {
             for (let element in data) {
                 if (data[element].firstName === this.firstName &&
                     data[element].lastName === this.lastName &&
                     data[element].id === this.id) {
-                    investigatorExists = true;
-                    break;
+                    return true;
                 }
             }
         });
-        return investigatorExists;
+
+        return false;
     }
 
 }
