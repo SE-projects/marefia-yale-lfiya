@@ -1,4 +1,4 @@
-import axios from 'axios';
+import axios from 'FrontEnd/axios';
 
 export default class Investigator {
     constructor(firstName, lastName, id, phone, bnbId) {

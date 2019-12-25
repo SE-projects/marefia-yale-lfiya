@@ -1,5 +1,5 @@
 /*const axios = require('axios');*/
-import axios from 'axios';
+import axios from 'FrontEnd/axios';
 
 export default class Advertisment {
     constructor(title, description, imageURL, telephone) {
