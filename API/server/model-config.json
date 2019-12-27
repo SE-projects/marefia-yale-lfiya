@@ -17,11 +17,7 @@
     "dataSource": "mongodb",
     "public": true
   },
-  "Advertisment": {
-    "dataSource": "mongodb",
-    "public": true
-  },
-  "Investigator": {
+  "Advertisement": {
     "dataSource": "mongodb",
     "public": true
   },
@@ -29,7 +25,7 @@
     "dataSource": "mongodb",
     "public": true
   },
-  "Customer": {
+  "system_user": {
     "dataSource": "mongodb",
     "public": true
   }

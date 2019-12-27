@@ -1,6 +1,6 @@
 {
-  "name": "Investigator",
-  "plural": "Investigators",
+  "name": "system_user",
+  "plural": "users",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
@@ -15,12 +15,18 @@
       "type": "string",
       "required": true
     },
-    "telephone": {
-      "type": "number",
+    "email": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "number"
+    },
+    "id": {
+      "type": "string",
       "required": true
     },
-    "bnbId": {
-      "type": "number",
+    "role": {
+      "type": "string",
       "required": true
     }
   },

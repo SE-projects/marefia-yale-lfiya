@@ -1,6 +1,6 @@
 {
-  "name": "Advertisment",
-  "plural": "Advertisments",
+  "name": "Advertisement",
+  "plural": "Advertisements",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
