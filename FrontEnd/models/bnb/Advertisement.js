@@ -1,6 +1,6 @@
 import axios from 'FrontEnd/axios';
 
-export default class Advertisment {
+export default class Advertisement {
     constructor(title, description, imageURL, telephone) {
         this.title = title;
         this.description = description;
@@ -13,11 +13,11 @@ export default class Advertisment {
 
         if (this.containtIsSame()) return "This Adv already exists";
         else {
-            await axios.post('http://localhost:3000/api/Advertisment',
+            await axios.post('http://localhost:3000/api/Advertisement',
                 {
                     title: this.title,
-                    description: this.title,
-                    telephone: this.title,
+                    description: this.description,
+                    telephone: this.telephone,
                     imageURL: this.title,
                 })
                 .then(value => {
@@ -28,7 +28,7 @@ export default class Advertisment {
     }
 
     async containtIsSame() {
-        await axios.get('http://localhost:3000/api/Advertisment').then(value => {
+        await axios.get('http://localhost:3000/api/Advertisement').then(value => {
             for (let advs in value) {
                 if (value[advs].title === this.title && value[advs].description === this.description) {
                     return true;

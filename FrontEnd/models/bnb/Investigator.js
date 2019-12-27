@@ -13,8 +13,7 @@ export default class Investigator {
         if (this.investigatorExists()) return "This investigator already exists";
         else {
             axios.post('http://localhost:3000/api/Investigator', {
-                firstName: this.firstName,
-                lastName: this.lastName,
+              name: this.lastName,
                 phone: this.phone,
                 bnbId: this.bnbId,
             }).then(value => {
