@@ -9,7 +9,7 @@ export default class Cook {
         this.phone = phone
     }
 
-    addPurchaser() {
+    addCook() {
         axios.post('http://localhost:3000/api/users', {
             firstName: this.firstName,
             lastName: this.lastName,
@@ -19,7 +19,7 @@ export default class Cook {
         }).then(value => value).catch(reason => reason)
     }
 
-    removePurchaser() {
+    removeCook() {
         axios.delete('http://localhost:3000/api/users', {params: {id: this.id}}).then(value => value).catch(reason => reason);
     }
 

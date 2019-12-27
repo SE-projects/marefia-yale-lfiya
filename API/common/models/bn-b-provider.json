@@ -15,6 +15,18 @@
       "type": "number",
       "required": true
     },
+    "location": {
+      "type": "String"
+    },
+    "category": {
+      "type": "string"
+    },
+    "numberOfStars": {
+      "type": "number"
+    },
+    "imageURL": {
+      "type": "string"
+    },
     "services": {
       "type": [
         "string"

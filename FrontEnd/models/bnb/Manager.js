@@ -9,7 +9,7 @@ export default class Purchaser {
         this.phone = phone
     }
 
-    addPurchaser() {
+    addManager() {
         axios.post('http://localhost:3000/api/users', {
             firstName: this.firstName,
             lastName: this.lastName,
@@ -19,7 +19,7 @@ export default class Purchaser {
         }).then(value => value).catch(reason => reason)
     }
 
-    removePurchaser() {
+    removeManager() {
         axios.delete('http://localhost:3000/api/users', {params: {id: this.id}}).then(value => value).catch(reason => reason);
     }
 
