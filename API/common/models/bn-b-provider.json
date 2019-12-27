@@ -20,45 +20,6 @@
         "string"
       ],
       "required": true
-    },
-    "cook": {
-      "type": {
-        "name": {
-          "type": "String",
-          "required": true
-        }
-      }
-    },
-    "room": {
-      "type": {
-        "number": {
-          "type": "number",
-          "required": true
-        },
-        "room_type": {
-          "type": "String"
-        }
-      }
-    },
-    "advertisement": {
-      "type": {
-        "title": {
-          "type": "String",
-          "required": true
-        },
-        "description": {
-          "type": "String"
-        },
-        "imageURL": {
-          "type": "String"
-        },
-        "telephone": {
-          "type": "number"
-        }
-      }
-    },
-    "investigator": {
-      "type": {}
     }
   },
   "validations": [],
