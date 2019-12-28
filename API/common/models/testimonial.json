@@ -1,0 +1,26 @@
+{
+  "name": "testimonial",
+  "plural": "testimonials",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "imageURL": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "body": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

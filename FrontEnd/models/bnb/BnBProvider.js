@@ -20,13 +20,19 @@ export default class BnBProvider {
             {params: {category: category}}).then(value => value).catch(reason => reason);
     }
 
-    static getBnBsHavingService(service) {
+     static async getBnBsHavingService(services) {
         let bnbs;
-        axios.get('http://localhost:3000/api/BnBProviders').then(value => bnbs = value).catch(reason => reason);
+        await axios.get('http://localhost:3000/api/BnBProviders').then(value => bnbs = value).catch(reason => reason);
 
-        for (let bnb in bnbs) {
-            if (bnb.services.contains(service)) continue;
-            bnbs.remove(indexOf(bnb))
+        a:for (let bnb in bnbs) {
+            let serviceExists = true;
+            for (let service in services) {
+                if (!bnb.services.contains(service)) {
+                    serviceExists = false;
+                    break;
+                }
+            }
+            if (!serviceExists) bnbs.remove(indexOf(bnb));
         }
         return bnbs;
     }

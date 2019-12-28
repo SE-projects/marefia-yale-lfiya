@@ -28,5 +28,13 @@
   "system_user": {
     "dataSource": "mongodb",
     "public": true
+  },
+  "customer_request": {
+    "dataSource": "mongodb",
+    "public": true
+  },
+  "testimonial": {
+    "dataSource": "mongodb",
+    "public": true
   }
 }
