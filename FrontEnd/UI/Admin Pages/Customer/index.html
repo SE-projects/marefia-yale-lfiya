@@ -58,7 +58,7 @@
 		</div><!--/.row-->
 		
 		<div class="row">
-			</div><!--/.row-->
+	  </div><!--/.row-->
 		
 		<div class="row">
 			<div class="col-md-6">
@@ -71,11 +71,44 @@
 						<div class="tab-content">
 							<div class="tab-pane fade in active" id="tab1">
 								<h4>Room Details</h4>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget rutrum purus. Donec hendrerit ante ac metus sagittis elementum. Mauris feugiat nisl sit amet neque luctus, a tincidunt odio auctor.</p>
+								<div class="panel panel-default articles">
+					<div class="panel-body articles-container">
+						<div class="article border-bottom">
+							<div class="col-xs-12">
+								<div class="row">
+									
+									<div class="col-xs-10 col-md-10">
+										<h4>B&amp;B Name</h4>
+										<p id="bnbName">Hilton Addis</p>
+									</div>
+								</div>
+							</div>
+							<div class="clear"></div>
+						</div><!--End .article-->
+						
+						<div class="article border-bottom">
+							<div class="col-xs-12">
+								<div class="row">
+									
+									<div class="col-xs-10 col-md-10">
+										<h4>Room No.</h4>
+										<p id="roomNo">Room 105</p>
+									</div>
+								</div>
+							</div>
+							<div class="clear"></div>
+						</div><!--End .article-->
+						
+					</div>
+				</div><!--End .articles-->
 							</div>
 							<div class="tab-pane fade" id="tab2">
 								<h4>Payment</h4>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget rutrum purus. Donec hendrerit ante ac metus sagittis elementum. Mauris feugiat nisl sit amet neque luctus, a tincidunt odio auctor.</p>
+								<p>Your outstanding balance is: </p>
+								<p id="balance">300br</p>
+									<div>
+										<button type="button" class="btn btn-sm btn-success">Make Payment</button>
+									</div>
 							</div>
 						</div>
 					</div>
@@ -95,12 +128,12 @@
 										<div class="form-group">
 										<div class="checkbox">
 											<label>
-												<input type="checkbox" value="">WiFi
+												<input type="checkbox" value="">Extra Towels
 											</label>
 										</div>
 										<div class="checkbox">
 											<label>
-												<input type="checkbox" value="">Television											</label>
+												<input type="checkbox" value="">Breakfast in bed											</label>
 										</div>
 										<div class="checkbox">
 											<label>
@@ -131,7 +164,7 @@
 								<!-- Form actions -->
 								<div class="form-group">
 									<div class="col-md-12 widget-right">
-										<button type="submit" class="btn btn-default btn-md pull-right">Add Room</button>
+										<button type="submit" class="btn btn-default btn-md pull-right">Send Request</button>
 									</div>
 								</div>
 							</fieldset>
