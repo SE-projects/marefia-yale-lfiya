@@ -29,8 +29,8 @@
 		
 		<ul class="nav menu">
 			<li><a href="index.html"><em class="fa fa-dashboard">&nbsp;</em> Dashboard</a></li>
-			<li><a href="panels.html"><em class="fa fa-clone">&nbsp;</em> Edit B&amp;B Details</a></li>
-			<li><a href="login.html"><em class="fa fa-power-off">&nbsp;</em> Logout</a></li>
+			<li><a href=#><em class="fa fa-clone">&nbsp;</em> Edit B&amp;B Details</a></li>
+			<li><a href="../../Registration Page/signin.html"><em class="fa fa-power-off">&nbsp;</em> Logout</a></li>
 		</ul>
 	</div><!--/.sidebar-->
 		
@@ -55,38 +55,133 @@
 				<div class="panel panel-default">
 					<div class="panel-heading">
 						B&amp;& Info
-						<span class="pull-right clickable panel-toggle panel-button-tab-left"><em class="fa fa-toggle-up"></em></span></div>
+					</div>
 					<div class="panel-body">
 						<form class="form-horizontal" action="" method="post">
 							<fieldset>
-								<!-- Name input-->
+								
 								<div class="form-group">
 									<label class="col-md-3 control-label" for="name">B&amp;B Name</label>
 									<div class="col-md-9">
-										<input id="name" name="name" type="text" placeholder="Your name" class="form-control">
+										<input id="bnbName" name="bnbName" type="text" placeholder="Your name" class="form-control">
 									</div>
 								</div>
 							
-								<!-- Email input-->
+								
 								<div class="form-group">
-									<label class="col-md-3 control-label" for="email">City, Country</label>
+									<label class="col-md-3 control-label">City, Country</label>
 									<div class="col-md-9">
-										<input id="email" name="email" type="text" placeholder="Your email" class="form-control">
+										<input id="location" name="location" type="text" placeholder="City, Country" class="form-control">
 									</div>
 								</div>
 								
-								<!-- Message body -->
+								
+								
+								
+								<!-- Form actions -->
 								<div class="form-group">
+									<div class="col-md-12 widget-right">
+										<button type="submit" class="btn btn-default btn-md pull-right">Update</button>
+									</div>
+								</div>
+							</fieldset>
+						</form>
+					</div>
+				</div>				
+			</div><!--/.col-->
+			
+			<div class="col-md-6">
+				<div class="panel panel-default">
+					<div class="panel-heading">Add Rooms<br>
+					</div>
+					<div class="panel-body">
+						<form class="form-horizontal" action="" method="post">
+							<fieldset>
+								
+								<div class="form-group">
+								  <label class="col-md-3 control-label">Room No.</label>
+									<div class="col-md-9">
+									  <input id="roomNo" name="roomNo" type="text" placeholder="Room Number" class="form-control">
+									</div>
+								</div>
+									
+								<div class="form-group">
+								  <label class="col-md-3 control-label" for="name2">Room Type</label>
+								  <div class="col-md-9">
+										<select name="bedType" id="roomType" class="form-control">
+											<option value="01">Sea View</option>
+											<option value="02">Small</option>
+											<option value="03">Premium King</option>
+											<option value="04">VIP King</option>
+											<option value="05">Royal</option>
+										</select>
+								  </div>
+							  </div>													
+															
+								<div class="form-group">
+								  <label class="col-md-3 control-label">Bed</label>
+								  <div class="col-md-9">
+										<select name="bedType" id="bedType" class="form-control">
+											<option value="01">King Size</option>
+											<option value="02">Double</option>
+											<option value="03">Medium Size</option>
+											<option value="04">Small Size</option>											
+										</select>
+								  </div>
+							  </div>
+							  
+							  <div class="form-group">
+								  <label class="col-md-3 control-label">Cost Per Day</label>
+									<div class="col-md-9">
+									  <input id="roomCost" name="roomCost" type="text" placeholder="Cost in birr" class="form-control">
+									</div>
+								</div>
+								
+								
+							  <div class="form-group">
+									<label class="col-md-3 control-label">Capacity</label>
+									<div class="col-md-9">
+										<input id="roomCapacity" name="roomCapacity" type="text" placeholder="Room capacity" class="form-control">
+									</div>
+									
+									<div class="form-group">
 									<label class="col-md-3 control-label" for="message">Services Provided</label>
 									<div class="col-md-9">
-										<textarea class="form-control" id="message" name="message" placeholder="Please enter your message here..." rows="5"></textarea>
+										<div class="form-group">
+										<div class="checkbox">
+											<label>
+												<input type="checkbox" value="">WiFi
+											</label>
+										</div>
+										<div class="checkbox">
+											<label>
+												<input type="checkbox" value="">Television											</label>
+										</div>
+										<div class="checkbox">
+											<label>
+												<input type="checkbox" value="">Swimming Pool
+											</label>
+										</div>
+										<div class="checkbox">
+											<label>
+												<input type="checkbox" value="">Gym
+											</label>
+										</div>
+										<div class="checkbox">
+											<label>
+												<input type="checkbox" value="">Aerobics
+											</label>
+										</div>
 									</div>
+									</div>
+								</div>
+									
 								</div>
 								
 								<!-- Form actions -->
 								<div class="form-group">
 									<div class="col-md-12 widget-right">
-										<button type="submit" class="btn btn-default btn-md pull-right">Submit</button>
+										<button type="submit" class="btn btn-default btn-md pull-right">Add Room</button>
 									</div>
 								</div>
 							</fieldset>
