@@ -1,7 +1,8 @@
 import axios from 'FrontEnd/axios';
+import {CookViews} from "../../views/bnb/CookView";
 
 export default class Cook {
-    constructor(firstName, lastName, id,email,phone) {
+    constructor(firstName, lastName, id, email, phone) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.id = id;
@@ -21,6 +22,26 @@ export default class Cook {
 
     removeCook() {
         axios.delete('http://localhost:3000/api/users', {params: {id: this.id}}).then(value => value).catch(reason => reason);
+    }
+
+    getCookRequests() {
+        axios.get('http://localhost:3000/api/requests', {params: {to: "Cook"}}).then(value => value).catch()
+    }
+
+    static async sendPurchaseRequest(body) {
+        await axios.post('http://localhost:3000/api/requests', {
+            title: "Cook",
+            body: body,
+            to: "purchaser"
+        })
+            .then(value => "Successfully added your request")
+            .catch(reason => "couldn't add your request");
+    }
+
+    static async getNumberOfRequest() {
+        axios.get('http://localhost:3000/api/requests', {params: {to: "Cook"}})
+            .then(value => value.length)
+            .catch(reason => reason);
     }
 
 }

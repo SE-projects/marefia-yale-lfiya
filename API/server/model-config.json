@@ -36,5 +36,9 @@
   "testimonial": {
     "dataSource": "mongodb",
     "public": true
+  },
+  "request": {
+    "dataSource": "mongodb",
+    "public": true
   }
 }

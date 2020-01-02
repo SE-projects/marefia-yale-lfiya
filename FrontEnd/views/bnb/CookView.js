@@ -1,16 +1,21 @@
-let clearRequestButton = document.getElementById('clearRequestButton');
-let requestList = document.getElementById('requestList');
-let requestInput = document.getElementById('requestInput');
-let submitRequest = document.getElementById('submitRequest');
-let requestNumber = document.getElementById('numberOfRequests');
+const clearRequestButton = document.getElementById('clearRequestButton');
+const requestList = document.getElementById('requestList');
+const requestInput = document.getElementById('requestInput');
+const submitRequest = document.getElementById('submitRequest');
+const requestNumber = document.getElementById('numberOfRequests');
+const message = document.getElementById('resultDisplay');
+
 
 export const CookViews = {
     getPurchaseRequest: () => requestInput.innerText,
+    setMessage: (message) => {
+        message.innerHTML = message;
+    },
     setOnSubmitRequest: (callBack) => {
         submitRequest.onclick = callBack;
     },
-    setRequestNumber: (requestNumber) => {
-        requestNumber.innerText = requestNumber;
+    setRequestNumber: (number) => {
+        requestNumber.innerText = number;
     },
     addRequestToList: (requestBody, roomNumber) => {
         let requestHTML = `<li class="right clearfix"><span class="chat-img pull-left">
