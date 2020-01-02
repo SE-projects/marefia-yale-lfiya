@@ -13,7 +13,7 @@ export default class Investigator {
         if (this.investigatorExists()) return "This investigator already exists";
         else {
             axios.post('http://localhost:3000/api/Investigator', {
-              name: this.lastName,
+                name: this.lastName,
                 phone: this.phone,
                 bnbId: this.bnbId,
             }).then(value => {
@@ -38,6 +38,17 @@ export default class Investigator {
         return false;
     }
 
+    static async getNumberOfRequest() {
+        await axios.get('http://localhost:3000/api/requests', {params: {to: "Investigator"}})
+            .then(value => value.length)
+            .catch(reason => reason);
+    }
+
+    static async getAllRequests() {
+        await axios.get('http://localhost:3000/api/requests', {params: {to: "Investigator"}})
+            .then(value => value)
+            .catch(reason => reason);
+    }
 }
 
 

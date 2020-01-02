@@ -1,15 +1,15 @@
-const clearRequestButton = document.getElementById('clearRequestButton');
+const clearRequestButton = document.getElementsByClassName('clearRequestButton');
 const requestList = document.getElementById('requestList');
 const requestInput = document.getElementById('requestInput');
 const submitRequest = document.getElementById('submitRequest');
 const requestNumber = document.getElementById('numberOfRequests');
-const message = document.getElementById('resultDisplay');
+const messageDisplay = document.getElementById('resultDisplay');
 
 
 export const CookViews = {
     getPurchaseRequest: () => requestInput.innerText,
     setMessage: (message) => {
-        message.innerHTML = message;
+        messageDisplay.innerHTML = message;
     },
     setOnSubmitRequest: (callBack) => {
         submitRequest.onclick = callBack;
@@ -28,10 +28,13 @@ export const CookViews = {
                             </div>
                             <div>
                                 <br>
-                                <button class="btn btn-primary btn-md" id="clearRequestButton">Clear Request</button>
+                                <button class="btn btn-primary btn-md clearRequestButton">Clear Request</button>
                             </div>
                         </li>`;
         requestList.insertAdjacentHTML("afterend", requestBody);
+    },
+    setOnClearRequest: (callBack) => {
+        clearRequestButton.onclick = callBack;
     }
 
 };

@@ -2,7 +2,7 @@ let numberOfRequests = document.getElementById('numberOfRequests');
 let acceptButton = document.getElementById('acceptRequest');
 let rejectButton = document.getElementById('rejectRequest');
 
-export const InvestgatorViews = {
+export const InvestigatorViews = {
     addRequest: (name, details) => {
         let requestHTML = `<li>
 								<div class="timeline-badge"><em class="glyphicon glyphicon-pushpin"></em></div>

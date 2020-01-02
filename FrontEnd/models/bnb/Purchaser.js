@@ -1,7 +1,7 @@
 import axios from 'FrontEnd/axios';
 
 export default class Purchaser {
-    constructor(firstName, lastName, id,email,phone) {
+    constructor(firstName, lastName, id, email, phone) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.id = id;
@@ -23,4 +23,11 @@ export default class Purchaser {
         axios.delete('http://localhost:3000/api/users', {params: {id: this.id}}).then(value => value).catch(reason => reason);
     }
 
+    static async getPurchaseRequestNumber() {
+        await axios.get('http://localhost:3000/api/requests', {params: {to: "Purchaser"}}).then(value => value.length).catch(reason => reason)
+    }
+
+    static async getAllReqests() {
+        await axios.get('http://localhost:3000/api/requests', {params: {to: "Purchaser"}}).then(value => value).catch(reason => reason);
+    }
 }

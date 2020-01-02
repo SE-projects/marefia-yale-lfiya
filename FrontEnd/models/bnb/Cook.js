@@ -24,7 +24,7 @@ export default class Cook {
         axios.delete('http://localhost:3000/api/users', {params: {id: this.id}}).then(value => value).catch(reason => reason);
     }
 
-    getCookRequests() {
+    static getCookRequests() {
         axios.get('http://localhost:3000/api/requests', {params: {to: "Cook"}}).then(value => value).catch()
     }
 
@@ -42,6 +42,12 @@ export default class Cook {
         axios.get('http://localhost:3000/api/requests', {params: {to: "Cook"}})
             .then(value => value.length)
             .catch(reason => reason);
+    }
+
+    static removeRequest(body) {
+        axios.delete('http://localhost:3000/api/requests', {params: {to: "Cook", body: body}})
+            .then(value => "Removed Request")
+            .catch(reason => "Couldn't remove request");
     }
 
 }
